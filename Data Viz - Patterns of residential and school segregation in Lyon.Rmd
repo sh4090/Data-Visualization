@@ -1,0 +1,160 @@
+
+```{r}
+data <- read.csv("C:/Users/hassa/Desktop/6106 Final Prez/Seg_coll_UU2_tot_mention.csv", sep = ";")
+data <- data[data$lib_aav == "Lyon",]
+
+prive <- data[data$Secteur == "PRIVE",]
+public <- data[data$Secteur == "PUBLIC",]
+
+## TRES FAV // DEFAV
+
+plot(public$p_tres_fav, public$p_defav, 
+     xlim = c(0,100), ylim = c(0,100), pch = 20, col = "blue", 
+     xaxs="i", yaxs="i", bty = "n",
+     xlab = "% Très Favorisés (1)", ylab = "% Défavorisé (4)")
+points(prive$p_tres_fav, prive$p_defav, col = "red", pch = 20)
+lines(c(100, 0), c(0, 100))
+
+## TRES FAV // FAV
+
+plot(public$p_tres_fav, public$p_fav, 
+     xlim = c(0,100), ylim = c(0,100), pch = 20, col = "blue", 
+     xaxs="i", yaxs="i", bty = "n",
+     xlab = "% Très Favorisés (1)", ylab = "% Favorisé (2)")
+points(prive$p_tres_fav, prive$p_fav, col = "red", pch = 20)
+lines(c(100, 0), c(0, 100))
+
+## TRES FAV // MOYEN
+
+plot(public$p_tres_fav, public$p_moyen, 
+     xlim = c(0,100), ylim = c(0,100), pch = 20, col = "blue", 
+     xaxs="i", yaxs="i", bty = "n",
+     xlab = "% Très Favorisés (1)", ylab = "% Moyen (3)")
+points(prive$p_tres_fav, prive$p_moyen, col = "red", pch = 20)
+lines(c(100, 0), c(0, 100))
+
+## FAV // DEFAV
+
+plot(public$p_fav, public$p_defav, 
+     xlim = c(0,100), ylim = c(0,100), pch = 20, col = "blue", 
+     xaxs="i", yaxs="i", bty = "n",
+     xlab = "% Favorisé (2)", ylab = "% Défavorisé (4)")
+points(prive$p_fav, prive$p_defav, col = "red", pch = 20)
+lines(c(100, 0), c(0, 100))
+
+## MOYEN // DEFAV
+
+plot(public$p_moyen, public$p_defav, 
+     xlim = c(0,100), ylim = c(0,100), pch = 20, col = "blue", 
+     xaxs="i", yaxs="i", bty = "n",
+     xlab = "% Moyen (3)", ylab = "% Défavorisé (4)")
+points(prive$p_moyen, prive$p_defav, col = "red", pch = 20)
+lines(c(100, 0), c(0, 100))
+
+
+plot(public$p_fav, public$p_moyen, 
+     xlim = c(0,100), ylim = c(0,100), pch = 20, col = "blue", 
+     xaxs="i", yaxs="i", bty = "n",
+     xlab = "% Favorisé (2)", ylab = "% Moyen (3)")
+points(prive$p_fav, prive$p_moyen, col = "red", pch = 20)
+lines(c(100, 0), c(0, 100))
+
+# main = "Distribution of Students by SES in Lyon Middle Schools"
+```
+
+Succès Académique
+
+```{r}
+## DEFAV // MENTION TB
+
+plot(public$p_defav, public$Tx.ment_TB, 
+     xlim = c(0,100), ylim = c(0,100), pch = 20, col = "blue", 
+     xaxs="i", yaxs="i", bty = "n", 
+     xlab = "% Défavorisé (4)", ylab = "% TB in Brevet")
+points(prive$p_defav, prive$Tx.ment_TB, col = "red", pch = 20)
+
+## TRES FAV // MENTION TB 
+
+plot(public$p_tres_fav, public$Tx.ment_TB, 
+     xlim = c(0,100), ylim = c(0,100), pch = 20, col = "blue", 
+     xaxs="i", yaxs="i", bty = "n", 
+     xlab = "% Très Favorisé (1)", ylab = "% TB in Brevet")
+points(prive$p_tres_fav, prive$Tx.ment_TB, col = "red", pch = 20)
+
+## FITTING THE MODELS
+
+lm_defav <- lm(c(public$Tx.ment_TB, prive$Tx.ment_TB) ~ c(public$p_defav, prive$p_defav))
+lm_defav_pu <- lm(public$Tx.ment_TB ~ public$p_defav)
+lm_defav_pr <- lm(prive$Tx.ment_TB ~ prive$p_defav)
+
+plot(x = c(public$p_defav, prive$p_defav), y = c(public$Tx.ment_TB, prive$Tx.ment_TB),
+     xlim = c(0,100), ylim = c(0,100), pch = 20,
+     xaxs="i", yaxs="i", bty = "n",
+     ylab = "% TB", xlab = "% Défavorisé (4)")
+abline(lm_defav)
+abline(lm_defav_pr, col = "red")
+abline(lm_defav_pu, col = "blue")
+text(90,20,labels="m = -0.2952 ", col="black")
+text(80,10,labels="m = -0.3775 ", col="blue")
+text(35,8,labels="m = -0.6704 ", col="red")
+
+lm_tres_fav <- lm(c(public$Tx.ment_TB, prive$Tx.ment_TB) ~ c(public$p_tres_fav, prive$p_tres_fav))
+lm_tres_fav_pu <- lm(public$Tx.ment_TB ~ public$p_tres_fav)
+lm_tres_fav_pr <- lm(prive$Tx.ment_TB ~ prive$p_tres_fav)
+
+
+
+```
+
+General residential segregation
+
+```{r}
+data <- read.csv("C:/Users/hassa/Desktop/6106 Final Prez/Lyon space.csv")
+
+## OUVRIERS // EMPLOYES
+
+plot(data$p_ouvriers, data$p_employes, 
+     xlim = c(0,100), ylim = c(0,100), pch = 20, 
+     xaxs="i", yaxs="i", bty = "n",
+     xlab = "% Ouvriers", ylab = "% Employés")
+lines(c(100, 0), c(0, 100))
+
+## CADRES // OUVRIERS
+
+plot(data$p_cadres, data$p_ouvriers, 
+     xlim = c(0,100), ylim = c(0,100), pch = 20, 
+     xaxs="i", yaxs="i", bty = "n",
+     xlab = "% White Collar", ylab = "% Blue Collar")
+lines(c(100, 0), c(0, 100))
+
+## CADRES // EMPLOYES
+
+plot(data$p_cadres, data$p_employes, 
+     xlim = c(0,100), ylim = c(0,100), pch = 20, 
+     xaxs="i", yaxs="i", bty = "n",
+     xlab = "% White Collar", ylab = "% Employés")
+lines(c(100, 0), c(0, 100))
+
+## CADRE // BLUE COLLAR
+
+plot(data$p_cadres, data$p_employes + data$p_ouvriers, 
+     xlim = c(0,100), ylim = c(0,100), pch = 20, 
+     xaxs="i", yaxs="i", bty = "n",
+     xlab = "% Cadres", ylab = "% Employés + Ouvriers")
+lines(c(100, 0), c(0, 100))
+
+```
+
+```{r}
+plot(x = c(public$p_tres_fav, prive$p_tres_fav), y = c(public$Tx.ment_TB, prive$Tx.ment_TB),
+     xlim = c(0,100), ylim = c(0,100), pch = 20,
+     xaxs="i", yaxs="i", bty = "n",
+     ylab = "% TB", xlab = "% Très Favorisé (1)")
+abline(lm_tres_fav)
+abline(lm_tres_fav_pr, col = "red")
+abline(lm_tres_fav_pu, col = "blue")
+text(90,40,labels="m = 0.3326 ", col="black")
+text(80,60,labels="m = 0.4443 ", col="blue")
+text(60,30,labels="m = 0.376 ", col="red")
+```
+
