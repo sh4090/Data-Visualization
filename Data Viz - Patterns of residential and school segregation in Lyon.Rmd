@@ -1,3 +1,5 @@
+The context and output for the code can be found on my portfolio website:
+https://sarahassanicareer.wixsite.com/my-portfolio/post/data-visualization-patterns-of-residential-and-school-segregation-in-lyon
 
 ```{r}
 data <- read.csv("C:/Users/hassa/Desktop/6106 Final Prez/Seg_coll_UU2_tot_mention.csv", sep = ";")
