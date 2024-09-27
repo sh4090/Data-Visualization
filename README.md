@@ -17,6 +17,11 @@ of agents of social mobility.
 The graphs are created in R using ggplot2. The maps are created using QGIS, the spatial analysis 
 software.
 
+#### Definitions
+Le Brevet des Collèges is an exam taken by all 9th grade students (last year of middle school in France) before leaving for high school in France. The students get a grade but also a "commentary", if you will, on how well they did on the exam. This commentary is called "Mention". For example, the highest mention is Mention Très Bien ("TB"), which a student get if they score 16/20 or higher.
+
+IRIS (Ilots Regroupés pour l'Information Statistique) is the geographical division used by INSEE, smaller than one neighborhood, but larger than one block.
+
 ## A Story of Socioeconomic Segregation in Lyon's Public Middle Schools
 
 ### Residential Segregation in Lyon's neighborhouds
@@ -83,12 +88,7 @@ but I choose to leave that out.
 
 ### Social Class and Academic Achievement
 
-Definitions - Le Brevet des Collèges is an exam taken by all 9th grade students (last year of middle school in France) 
-before leaving for high school in France. The students get a grade but also a "commentary", if you will, on how well 
-they did on the exam. This commentary is called "Mention". For example, the highest mention is Mention Très Bien ("TB"),
-which a student get if they score 16/20 or higher.
-
-I will be using the perentage of students obtaining mention TB as a proxy to academic achievement.
+I will be using the percentage of students obtaining mention TB in Brevet as a proxy to academic achievement.
 
 ![image](https://github.com/user-attachments/assets/deee9a64-8eb3-4027-9219-08f0ad523b70)
 
