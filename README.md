@@ -34,11 +34,11 @@ limited social mixing.
 ![image](https://github.com/user-attachments/assets/3113ab16-88f1-4406-a5f5-c50a6f314d13)
 
 Through graphical analysis, we see how a mere 1% increase in white-collar residents leads to a steep decline 
-in lower social classes in nearby areas, proving further the idea of socioeconomic isolation, especially 
+in lower social classes in nearby areas (bottom left), proving further the idea of socioeconomic isolation, especially 
 between the 2 extremes of the socioeconomic spectrum.
 
 For instance, the distribution of the data between the percentage of blue collar workers and employees indicates 
-similar levels of concentration of the two groups across the same IRISes.
+similar levels of concentration of the two groups across the same IRISes (bottom right).
 
 In short, it appears that the more disparity between two people's socioeconomic status, the less likely they are 
 to live in the same IRIS.
