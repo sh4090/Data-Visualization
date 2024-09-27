@@ -1,5 +1,7 @@
 # Data Visualization: A Story of Socioeconomic Segregation in Lyon's Public Middle Schools (2018)
 
+#### NOTE: These are extremely rough deductions made based on the graphs and maps alone, not a thorough quantitative analysis.
+
 ## Project Overview
 This project is one of my presentations for STAT6106 Communicating Data and Statistics class.
 
@@ -17,7 +19,7 @@ software.
 
 ## A Story of Socioeconomic Segregation in Lyon's Public Middle Schools
 
-#### Residential Segregation in Lyon's neighborhouds
+### Residential Segregation in Lyon's neighborhouds
 I use occupation as a proxy for socioeconomic status. 
 
 ![image](https://github.com/user-attachments/assets/e4889331-e718-4871-892f-3f238b1cd320)
@@ -43,4 +45,23 @@ similar levels of concentration of the two groups across the same IRISes (bottom
 In short, it appears that the more disparity between two people's socioeconomic status, the less likely they are 
 to live in the same IRIS.
 
+### Socioeconomic Makeout of Lyon's Middle Schools
+
+My theory suggests that the socioeconomic composition of Lyon’s middle schools mirrors the socioeconomic characteristics 
+of the neighborhoods in which they are located. If we can establish a connection between a school's socioeconomic profile 
+and that of its surrounding area, it suggests that residential segregation directly contributes to segregation within 
+the school system. This leads to unequal opportunities for students, as those from higher- and lower-income backgrounds 
+remain separated, limiting their exposure to diverse social realities. This perpetuates a cycle of social reproduction, 
+where students are likely to remain within the socioeconomic conditions they were born into. This theory assumes that 
+there is minimal change in the demographic makeup of these neighborhoods over time.
+
+In this map, category (1) Très Favorisé and (2) Favorisé represent High Socioeconomic status in schools. Category 
+(3) Moyen and (4) Très Défavorisé represent Low Socioeconomic status in schools.
+
+![image](https://github.com/user-attachments/assets/a9dfc923-ec50-401a-af33-ba58fd528873)
+
+Areas populated by blue-collar and employee workers appear to correlate directly with schools that have the highest 
+percentages of students from the lowest socioeconomic backgrounds. Meanwhile, schools in affluent areas serve predominantly 
+high-SES students. This map clues us into how socioeconomic divides might be linked to the perpetuation of educational inequality.
+It shows how wealth and opportunity are concentrated not just geographically, but institutionally.
 
