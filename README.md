@@ -98,7 +98,7 @@ different story.
 
 ![image](https://github.com/user-attachments/assets/cde8dddd-b194-46ce-a779-6928fcdd08c4)
 
-In this graph, we are only examining the trend between the concentration of students from the extremeties of the socioeconomic
+In this graph, we are only examining the trend between the concentration of students from the extremities of the socioeconomic
 scale and the percentage of students obtaining mention TB such that there appears to be a positive correlation when it comes
 to students from the highest socioeconomic status, and a negative correlation with students from the lowest socioeconomic status.
 
