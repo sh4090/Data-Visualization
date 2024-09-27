@@ -5,7 +5,11 @@
 ## Project Overview
 This project is one of my presentations for STAT6106 Communicating Data and Statistics class.
 
-It explores the relationship between residential segregation and educational inequality in Lyon, using occupation as a proxy for socioeconomic status (SES). By leveraging data on employment and school demographics from INSEE and the French Ministry of Education, I analyzed patterns of social stratification across the city and display the strong correlations between SES and academic achievement in the form of graphs and maps. 
+It explores the relationship between residential segregation and educational inequality in Lyon, 
+using occupation as a proxy for socioeconomic status (SES). By leveraging data on employment and 
+school demographics from INSEE and the French Ministry of Education, I analyzed patterns of social 
+stratification across the city and display the strong correlations between SES and academic
+achievement in the form of graphs and maps. 
 
 My aim is to provide an argument that middle schools act as agents of social replication instead 
 of agents of social mobility.
@@ -14,16 +18,6 @@ The graphs are created in R using ggplot2. The maps are created using QGIS, the 
 software.
 
 ## A Story of Socioeconomic Segregation in Lyon's Public Middle Schools
-
-### Key Findings
-
-From this data visualization project, I observed that:
-1. Socioeconomic classes are concentrated in specific areas of Lyon. The more apart these groups
-are on the socioeconomic scale, the less likely they are to reside in the same geographic area.
-2. The socioeconomic status of students in middle schools reflects the socioeconomic fabric of
-the working population in the geographic area where the school is located. As such, the further
-apart students are on the socioeconomic scale, the less likely they are to attend the same school.  
-3. 
 
 ### Residential Segregation in Lyon's neighborhouds
 I use occupation as a proxy for socioeconomic status. 
@@ -86,6 +80,42 @@ This is best represented by the following graphs:
 
 There's also commentary that can be made on the socioeconomic fabric of private schools v. public schools, 
 but I choose to leave that out.
+
+### Social Class and Academic Achievement
+
+Definitions - Le Brevet des Collèges is an exam taken by all 9th grade students (last year of middle school in France) 
+before leaving for high school in France. The students get a grade but also a "commentary", if you will, on how well 
+they did on the exam. This commentary is called "Mention". For example, the highest mention is Mention Très Bien ("TB"),
+which a student get if they score 16/20 or higher.
+
+I will be using the perentage of students obtaining mention TB as a proxy to academic achievement.
+
+![image](https://github.com/user-attachments/assets/deee9a64-8eb3-4027-9219-08f0ad523b70)
+
+Using spatial analysis alone, there doesn't appear to be much correlation between the level of academic achievement 
+and the socioeconomic fabric of a school, or its geographical area. However, a graphical representation may clue us into a 
+different story.
+
+![image](https://github.com/user-attachments/assets/cde8dddd-b194-46ce-a779-6928fcdd08c4)
+
+In this graph, we are only examining the trend between the concentration of students from the extremeties of the socioeconomic
+scale and the percentage of students obtaining mention TB such that there appears to be a positive correlation when it comes
+to students from the highest socioeconomic status, and a negative correlation with students from the lowest socioeconomic status.
+
+The negative correlation appears to be greater in public schools, and the positive correlation in private schools. This based on
+simple linear regression, meaning there are many flaws to this analysis but it gives us a good idea on trends at this exploratory 
+stage.
+
+## Key Findings
+
+From this data visualization project, I observed that:
+1. Socioeconomic classes are concentrated in specific areas of Lyon. The more apart these groups are on the socioeconomic scale, the less likely they are to reside in the same geographic area.
+2. The socioeconomic status of students in middle schools reflects the socioeconomic fabric of the working population in the geographic area where the school is located. As such, the further apart students are on the socioeconomic scale, the less likely they are to attend the same school.  
+3. There appears to be a correlation between the scocioeconomic fabric of schools and the level of academic achievement reached in these schools, especially in terms of the concentration of students from the extremes of the socioeconomic scale.
+
+The visual narrative, with its consistent alignment of residential segregation, school demographics, and academic outcomes, points to one potential theory: the residential segregation seen in Lyon isn’t just about where people live — it’s about who gets the opportunities to succeed. Schools in wealthier neighborhoods reinforce the socioeconomic advantages their students already have, while schools in poorer areas perpetuate the cycle of disadvantage. 
+
+There is a lot of academic work assessing the strengths and weaknesses of this theory, worth delving deeper into.
 
 
 
