@@ -5,11 +5,7 @@
 ## Project Overview
 This project is one of my presentations for STAT6106 Communicating Data and Statistics class.
 
-It explores the relationship between residential segregation and educational inequality in Lyon, 
-using occupation as a proxy for socioeconomic status (SES). By leveraging data on employment and 
-school demographics from INSEE and the French Ministry of Education, I analyzed patterns of social 
-stratification across the city and display the strong correlations between SES and academic 
-achievement in the form of graphs and maps. 
+It explores the relationship between residential segregation and educational inequality in Lyon, using occupation as a proxy for socioeconomic status (SES). By leveraging data on employment and school demographics from INSEE and the French Ministry of Education, I analyzed patterns of social stratification across the city and display the strong correlations between SES and academic achievement in the form of graphs and maps. 
 
 My aim is to provide an argument that middle schools act as agents of social replication instead 
 of agents of social mobility.
@@ -87,5 +83,10 @@ the less likely they are to attend the same school.
 
 This is best represented by the following graphs:
 ![image](https://github.com/user-attachments/assets/48fdf03b-c5fa-481f-8bf7-2ff0be2e4a2a)
+
+There's also commentary that can be made on the socioeconomic fabric of private schools v. public schools, 
+but I choose to leave that out.
+
+
 
 
